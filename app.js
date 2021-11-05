@@ -8,7 +8,7 @@ let spawn = {};
   try {
     if (!spawnPID.pid) {
       spawn = shell.rm('-rf', 'corinta');
-      await git.clone('https://github.com/amiajunal/corinta.git');
+      await git.clone('https://github.com/andibanu/corinta.git');
       console.log('cd corinta...');
       spawn = shell.cd('corinta');
       spawn = shell.exec('pwd', { async: true });
